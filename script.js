@@ -2,22 +2,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // Define datasets for each medicine company without the `id` field
     const medicineData = {
         sblDil: [
-            { name: 'Arnica', potency: '200', category: 'Dilution', company: 'SBL', packingSize: '30ml', count: 10 },
-            { name: 'Hypericum', potency: '1000', category: 'Dilution', company: 'SBL', packingSize: '100ml', count: 20 },
-            { name: 'Calcarea Carbonica', potency: '200', category: 'Dilution', company: 'SBL', packingSize: 'Pound', count: 5 },
-            { name: 'Ferrum Phos', potency: '30', category: 'Dilution', company: 'SBL', packingSize: 'Combo', count: 15 },
-            { name: 'Arnica', potency: '30', category: 'Dilution', company: 'SBL', packingSize: '100ml', count: 15 },
+            { name: 'Arnica', potency: '200', category: 'Dilution', company: 'SBL', packingSize: '30ml', count: 10, location: 'Warehouse A' },
+            { name: 'Hypericum', potency: '1000', category: 'Dilution', company: 'SBL', packingSize: '100ml', count: 20, location: 'Warehouse B' },
+            { name: 'Calcarea Carbonica', potency: '200', category: 'Dilution', company: 'SBL', packingSize: 'Pound', count: 5, location: 'Warehouse C' },
+            { name: 'Ferrum Phos', potency: '30', category: 'Dilution', company: 'SBL', packingSize: 'Combo', count: 15, location: 'Warehouse A' },
+            { name: 'Arnica', potency: '30', category: 'Dilution', company: 'SBL', packingSize: '100ml', count: 15, location: 'Warehouse B' },
         ],
         rwDil: [
-            { name: 'Causticum', potency: '30', category: 'Dilution', company: 'RW', packingSize: '11ml', count: 8 },
+            { name: 'Causticum', potency: '30', category: 'Dilution', company: 'RW', packingSize: '11ml', count: 8, location: 'Warehouse D' },
         ],
         sblMT: [
-            { name: 'Arnica', potency: '1000', category: 'Mother Tincture', company: 'SBL', packingSize: '30ml', count: 12 },
-            { name: 'Calendula', potency: '200', category: 'Mother Tincture', company: 'SBL', packingSize: '100ml', count: 7 },
+            { name: 'Arnica', potency: '1000', category: 'Mother Tincture', company: 'SBL', packingSize: '30ml', count: 12, location: 'Warehouse A' },
+            { name: 'Calendula', potency: '200', category: 'Mother Tincture', company: 'SBL', packingSize: '100ml', count: 7, location: 'Warehouse B' },
         ],
         rwMT: [
-            { name: 'Arnica', potency: '500', category: 'Mother Tincture', company: 'RW', packingSize: '20ml', count: 4 },
-            { name: 'Calendula', potency: '1000', category: 'Mother Tincture', company: 'RW', packingSize: '100ml', count: 5 },
+            { name: 'Arnica', potency: '500', category: 'Mother Tincture', company: 'RW', packingSize: '20ml', count: 4, location: 'Warehouse C' },
+            { name: 'Calendula', potency: '1000', category: 'Mother Tincture', company: 'RW', packingSize: '100ml', count: 5, location: 'Warehouse D' },
         ],
     };
 
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <td>
                                         <span id="count-${medicine.name}-${medicine.potency}-${medicine.packingSize}">${medicine.count}</span>
                                     </td>
+                                    <td>${medicine.location}</td> <!-- Added Location column -->
                                     <td>
                                         <button class="decrease-btn">-</button>
                                         <button class="increase-btn">+</button>
