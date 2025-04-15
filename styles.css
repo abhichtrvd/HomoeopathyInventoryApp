@@ -1,0 +1,159 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.header-menu {
+    margin-bottom: 20px;
+}
+
+.header-menu label {
+    margin-right: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* General button styling */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s; /* Smooth transition */
+}
+
+/* Hover effect */
+button:hover {
+    opacity: 0.8; /* Change opacity on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+/* Active state */
+button:active {
+    transform: scale(0.95); /* Slightly shrink button on click */
+}
+
+/* Styling for the active button */
+button.active {
+    background-color: #0056b3; /* Darker shade for active button */
+    color: white; /* Ensure text color is white for visibility */
+    border: 2px solid #ffffff; /* White border for contrast */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.7); /* Add shadow to indicate active state */
+}
+
+/* Button color styles */
+button.decrease-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+button.increase-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+button.edit-btn {
+    background-color: #3f83f8;
+    color: white;
+}
+
+/* Optional: Disabled button styling */
+button:disabled {
+    background-color: #cccccc; /* Gray color for disabled */
+    color: #666666; /* Darker gray text */
+    cursor: not-allowed; /* Show not-allowed cursor */
+}
+
+#searchInput {
+    margin: 20px 0;
+    width: 100%;               /* Full width */
+    height: 40px;             /* Height of the search box */
+    padding: 10px;            /* Padding for aesthetics */
+    font-size: 16px;          /* Increased font size for readability */
+    border: 2px solid #ccc;   /* Light border */
+    border-radius: 4px;       /* Rounded corners */
+    box-sizing: border-box;    /* Include padding in width */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition effects */
+}
+
+#searchInput:focus {
+    border-color: #007BFF;    /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow effect on focus */
+}
+
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Homeopathic Medicine Manager",
+    "version": "1.0",
+    "permissions": [
+      "tabs",
+      "storage",
+      "identity",
+      "https://sheets.googleapis.com/"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "oauth2": {
+      "client_id": "252364179322-07lp1j47u060vepp9j568ttcoau48cnh.apps.googleusercontent.com",
+      "scopes": [
+        "https://www.googleapis.com/auth/spreadsheets"
+      ]
+    },
+    "host_permissions": [
+      "https://sheets.googleapis.com/*"
+    ]
+  }
+  

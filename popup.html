@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Medicine Inventory Management</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Medicine Inventory Management</h1>
+
+        <div class="header-menu">
+            <label>
+                <input type="checkbox" id="dilutionCheckbox"> Dilution
+            </label>
+            <label>
+                <input type="checkbox" id="motherTinctureCheckbox"> Mother Tincture
+            </label>
+            <button id="reorderButton">Reorder</button>
+        </div>
+
+        <div id="dilutionView" class="hidden">
+            <h2>Dilution Companies</h2>
+            <table id="dilutionTable">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Packing Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RW</td>
+                        <td><input type="checkbox" value="11ml" data-company="RW" data-category="Dilution" data-packing-size="11ml"> 11ml</td>
+                    </tr>
+                    <tr>
+                        <td>Adel</td>
+                            <td><input type="checkbox" value="11ml" data-company="Adel" data-category="Dilution" data-packing-size="11ml"> 11ml</td>
+                    </tr>
+                    <tr>
+                        <td>SBL</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="SBL" data-category="Dilution" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="SBL" data-category="Dilution" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="SBL" data-category="Dilution" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="SBL" data-category="Dilution" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>WSI</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="WSI" data-category="Dilution" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="WSI" data-category="Dilution" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="WSI" data-category="Dilution" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="WSI" data-category="Dilution" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bakson</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="Bakson" data-category="Dilution" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="Bakson" data-category="Dilution" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="Bakson" data-category="Dilution" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="Bakson" data-category="Dilution" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="motherTinctureView" class="hidden">
+            <h2>Mother Tincture Companies</h2>
+            <table id="motherTinctureTable">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Packing Size</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>RW</td>
+                        <td>
+                            <input type="checkbox" value="20ml" data-company="RW" data-category="Mother Tincture" data-packing-size="20ml"> 20ml
+                            <input type="checkbox" value="100ml" data-company="RW" data-category="Mother Tincture" data-packing-size="100ml"> 100ml
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Adel</td>
+                        <td>
+                            <input type="checkbox" value="20ml" data-company="Adel" data-category="Mother Tincture" data-packing-size="20ml"> 20ml
+                            <input type="checkbox" value="100ml" data-company="Adel" data-category="Mother Tincture" data-packing-size="100ml"> 100ml
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>SBL</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="SBL" data-category="Mother Tincture" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="SBL" data-category="Mother Tincture" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="SBL" data-category="Mother Tincture" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="SBL" data-category="Mother Tincture" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>WSI</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="WSI" data-category="Mother Tincture" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="WSI" data-category="Mother Tincture" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="WSI" data-category="Mother Tincture" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="WSI" data-category="Mother Tincture" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>NL</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="NL" data-category="Mother Tincture" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="NL" data-category="Mother Tincture" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="NL" data-category="Mother Tincture" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="NL" data-category="Mother Tincture" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Adven</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="Adven" data-category="Mother Tincture" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="Adven" data-category="Mother Tincture" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="Adven" data-category="Mother Tincture" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="Adven" data-category="Mother Tincture" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Bakson</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="Bakson" data-category="Mother Tincture" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="Bakson" data-category="Mother Tincture" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="Bakson" data-category="Mother Tincture" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="Bakson" data-category="Mother Tincture" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Allen</td>
+                        <td>
+                            <input type="checkbox" value="30ml" data-company="Allen" data-category="Mother Tincture" data-packing-size="30ml"> 30ml
+                            <input type="checkbox" value="100ml" data-company="Allen" data-category="Mother Tincture" data-packing-size="100ml"> 100ml
+                            <input type="checkbox" value="Pound" data-company="Allen" data-category="Mother Tincture" data-packing-size="Pound"> Pound
+                            <input type="checkbox" value="Combo" data-company="Allen" data-category="Mother Tincture" data-packing-size="Combo"> Combo
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="searchInputContainer">
+            <input type="text" id="searchInput" placeholder="Search medicines...">
+        </div>    
+        
+        <div>
+            <button id="showAll">All Data</button>
+            <button id="showLowStock">Low Stock</button>
+            <button id="showHighStock">High Stock</button>
+            <button id="showOutOfStock">Out of Stock</button>
+        </div>
+
+        <div id="inventoryDiv" class="hidden">
+            <h2>Medicine Inventory</h2>
+            <table id="inventoryTable">
+                <thead>
+                    <tr>
+                        <th>Medicine Name</th>
+                        <th>Potency</th>
+                        <th>Category</th>
+                        <th>Company</th>
+                        <th>Packing Size</th>
+                        <th>Count</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="inventoryTableBody">
+                    <!-- Dynamic content will be added here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
